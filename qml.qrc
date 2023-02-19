@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>TitleBar.qml</file>
+        <file>BottomLine.qml</file>
+        <file>test_data.js</file>
+    </qresource>
+</RCC>
