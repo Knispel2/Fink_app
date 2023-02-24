@@ -10,20 +10,21 @@ class base_connector : public QObject
 {
     Q_OBJECT
 private:
-    QSqlDatabase main_handler = QSqlDatabase::addDatabase("QPSQL");
+    QSqlDatabase main_handler;
     QString file = QStandardPaths::standardLocations(QStandardPaths::HomeLocation)[0] + "data";
 public:
     explicit base_connector(QObject *parent = nullptr);
-    QString last_updatetime();
-    bool status()
+    Q_INVOKABLE QString last_updatetime();
+    Q_INVOKABLE bool status()
     {
         return main_handler.open();
     };
-    QVector <QVector <QString>> base_update();
-    void close_handler()
+    Q_INVOKABLE QVector <QString> base_update();
+    Q_INVOKABLE void close_handler()
     {
         main_handler.close();
     }
+    Q_INVOKABLE void delete_obj(QString name);
 
 signals:
 

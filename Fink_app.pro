@@ -1,4 +1,4 @@
-QT += quick sql
+QT += webview quick sql
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -23,3 +23,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     base_connector.h
+
+android: include(./android_openssl/openssl.pri)
+
+DISTFILES += \
+    android_openssl/openssl.pri \
+    server_methods.js
