@@ -29,3 +29,4 @@ android: include(./android_openssl/openssl.pri)
 DISTFILES += \
     android_openssl/openssl.pri \
     server_methods.js
+android: include(C:/Users/Knispel/Documents/Fink_app/android_openssl/openssl.pri)
